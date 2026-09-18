@@ -37,3 +37,19 @@ def calcular_heuristica(ruta):
 
 mejor_ruta = None
 mejor_puntuacion = 999
+
+for ruta in rutas:
+    puntuacion = calcular_heuristica(ruta)
+    
+    print(ruta["nombre"], "puntuacion:", puntuacion)
+    
+    if puntuacion < mejor_puntuacion:
+        mejor_puntuacion = puntuacion
+        mejor_ruta = ruta
+        
+print("\n==============================")
+print("DECISIÓN DEL AGENTE")
+
+
+print("La mejor opción es:", mejor_ruta["nombre"])
+print("Puntuación:", mejor_puntuacion)
