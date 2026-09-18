@@ -19,3 +19,21 @@ rutas = [
         "trafico": 1
     }
 ]
+
+#heuristias
+
+def calcular_heuristica(ruta):
+    
+    puntuacion = (
+        ruta["distancia"] * 0.4 +
+        ruta["tiempo"] * 0.4 +
+        ruta["trafico"] * 2
+        
+    )
+    
+    return puntuacion
+
+#analizamos las rutad
+
+mejor_ruta = None
+mejor_puntuacion = 999
